@@ -1,0 +1,38 @@
+
+
+--- Creamos el usuario
+CREATE USER ResponsableP1 WITH PASSWORD 'root';
+
+--- Creamos la base de datos
+CREATE DATABASE Practica1 WITH OWNER ResponsableP1;
+
+--- Dar permisos al usuario creado 
+GRANT ALL PRIVILEGES ON DATABASE Practica1 TO ResponsableP1;
+
+--- cREAMOS LA TABLA OFERTA Y OCUPACION
+
+CREATE TABLE IF NOT EXISTS(CURSO_ACADEMICO int,
+	ESTUDIO varchar(200),
+	LOCALIDAD varchar(50),
+	CENTRO varchar(200),
+	TIPO_CENTRO varchar(50),
+	TIPO_ESTUDIO varcahr(10),
+	PLAZAS_OFERTADAS int,
+	PLAZAS_MATRICULADAS int,
+	PLAZAS_SOLICITADAS int,
+	INDICE_OCUPACION float,
+	FECHA_ACTUALIZACION varchar(15)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
