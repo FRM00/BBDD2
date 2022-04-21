@@ -11,9 +11,9 @@ wget -O ofertaOcupacion2021.csv https://zaguan.unizar.es/record/96835/files/CSV.
 wget -O ofertaOcupacion1920 https://zaguan.unizar.es/record/87665/files/CSV.csv
 
 #faltan los resultados
-#wget
-#wget
-#wget
+wget -O resultados2021.csv https://zaguan.unizar.es/record/107369/files/CSV.csv
+wget -O resultados1920.csv https://zaguan.unizar.es/record/95644/files/CSV.csv
+wget -O resultados1819.csv https://zaguan.unizar.es/record/76879/files/CSV.csv
 
 #notas de corte
 wget -O notasCorte2122.csv https://zaguan.unizar.es/record/109322/files/CSV.csv
