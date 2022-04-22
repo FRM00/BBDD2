@@ -14,3 +14,5 @@ echo " "
 #sudo -iu postgres
 cd /home/alumno/Desktop/Prueba
 psql -U responsablep1 -d Practica1 < cargarDatos.sql
+echo "Lanzamos el trigger"
+psql -U responsablep1 -d Practica1 < trigger.sql
