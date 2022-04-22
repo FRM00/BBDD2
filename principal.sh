@@ -11,5 +11,6 @@ echo " "
 #sudo -iu postgres psql < crearUserBD.sql
 
 #Cargamos los datos en la BD de los archivos csv
-sudo -iu postgres
-#psql -U responsablep1 -d Practica1 -a < cargarDatos.sql
+#sudo -iu postgres
+cd /home/alumno/Desktop/Prueba
+psql -U responsablep1 -d Practica1 < cargarDatos.sql
