@@ -1,0 +1,34 @@
+
+mongo "mongodb+srv://clusterfrm.6e8ku.mongodb.net/test" --username FRM00
+
+
+
+
+
+consulta 2
+
+db.films.aggregate([
+        {
+            $match: {
+            "Actors.First name": "SANDRA", 
+            "Actors.Last name": "PECK"
+            }
+        },
+        {
+            $group: {
+            "_id": "$Rating",
+            count: {$sum: 1}
+            }
+        },        
+])
+
+
+
+
+
+
+
+
+
+
+
