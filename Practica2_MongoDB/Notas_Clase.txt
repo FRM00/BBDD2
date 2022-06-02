@@ -1,0 +1,21 @@
+MongoDB
+
+
+db.help()
+
+para uysar una base de datos en concreto: use nombreBD
+para comprobar la bd que se esta usando: db
+
+show dbs
+show collections
+
+insertare un documento: db.nombrebd.insert({"name": "hola"})
+
+eliminar database: db.dropDatabase() (antes habiendo hehcho lo de use nombredb)
+
+eliminar coleccion de una bd: bd.nombrecollection.drop()
+
+para mostrar por pantalla la consulta: db.nombredb.find().pretty()
+
+
+
