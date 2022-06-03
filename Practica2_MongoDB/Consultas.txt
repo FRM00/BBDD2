@@ -28,7 +28,13 @@ db.films.aggregate([
 
 
 
+db.notas_corte_unizar.aggregate([
+{
+$addFields:
+{NOTA_ENTERO_JULIO: {$toInt: "$NOTA_CORTE_DEFINITIVA_JULIO"}}
+}
+])
 
 
-
+{NOTA_ENTERO_SEPTIEMBRE: {$toInt: "$NOTA_CORTE_DEFINITIVA_SEPTIEMBRE"}
 
