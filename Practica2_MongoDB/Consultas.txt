@@ -1,0 +1,40 @@
+
+mongo "mongodb+srv://clusterfrm.6e8ku.mongodb.net/test" --username FRM00
+
+
+
+
+
+consulta 2
+
+db.films.aggregate([
+        {
+            $match: {
+            "Actors.First name": "SANDRA", 
+            "Actors.Last name": "PECK"
+            }
+        },
+        {
+            $group: {
+            "_id": "$Rating",
+            count: {$sum: 1}
+            }
+        },        
+])
+
+
+
+
+
+
+
+db.notas_corte_unizar.aggregate([
+{
+$addFields:
+{NOTA_ENTERO_JULIO: {$toInt: "$NOTA_CORTE_DEFINITIVA_JULIO"}}
+}
+])
+
+
+{NOTA_ENTERO_SEPTIEMBRE: {$toInt: "$NOTA_CORTE_DEFINITIVA_SEPTIEMBRE"}
+
