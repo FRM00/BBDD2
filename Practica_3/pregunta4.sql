@@ -19,12 +19,12 @@ WHERE apellido1 LIKE 'Gracia';
 
 
 ---Consulta 5
-SELECT i.codAsig, a.nombreAsig
+SELECT a.nombreAsig
 FROM Asignatura a, Imparte i
 WHERE 
-    a.codAsig = i.codAsig
-GROUP BY i.codAsig, a.nombreAsig
-HAVING COUNT(i.DNI) > 1;
+    a.codAsig = i.codigo_asignatura
+GROUP BY a.nombreAsig
+HAVING COUNT(i.dni_docente) > 1;
 
 
 ---Consulta 6
@@ -38,4 +38,4 @@ UNION
 SELECT i.dni, i.nombre, i.apellido1, COUNT(p.referencia_proyecto) AS CargaTrabajoInvest
 FROM Investigador i, Participa p
 WHERE i.dni = p.dni_investigador
-GROUP BY i.dni
+GROUP BY i.dni;

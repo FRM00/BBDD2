@@ -41,11 +41,11 @@ CREATE TABLE Asignatura(
 
 ---Creamos la tabla imparte
 CREATE TABLE Imparte(
-    dni_docente varchar2(50),
+    dni_docente VARCHAR2(50),
     codigo_asignatura int,
 
-    FOREIGN KEY (codigo_asignatura) REFERENCES Asignatura(codAsig),
-    FOREIGN KEY (dni_docente) REFERENCES Docente(dni)
+    FOREIGN KEY(dni_docente) REFERENCES Docente(dni)
+    FOREIGN KEY(codigo_asignatura) REFERENCES Asignatura(codAsig),
 ); 
 
 
