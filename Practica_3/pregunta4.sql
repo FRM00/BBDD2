@@ -28,14 +28,14 @@ HAVING COUNT(i.dni_docente) > 1;
 
 
 ---Consulta 6
-SELECT d.dni, d.nombre, d.apellido1, COUNT(i.codigo_asignatura) AS CargaTrabajoDocent
+SELECT d.dni, COUNT(i.codigo_asignatura) as CargaTrabajoDocent
 FROM Docente d, Imparte i
 WHERE d.dni = i.dni_docente
 GROUP BY d.dni
 
 UNION
 
-SELECT i.dni, i.nombre, i.apellido1, COUNT(p.referencia_proyecto) AS CargaTrabajoInvest
+SELECT i.dni, COUNT(p.referencia_proyecto) as CargaTrabajoInvest
 FROM Investigador i, Participa p
 WHERE i.dni = p.dni_investigador
 GROUP BY i.dni;
