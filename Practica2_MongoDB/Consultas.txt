@@ -23,7 +23,7 @@ db.films.aggregate([
 ])
 
 
-
+db.createView("oferta_unizar_con_notas", "notas_corte_unizar",[{$lookup:{from: "oferta_unizar", localField:"_id",foreignField:"_id",as: "aux"}},{$project:{"CURSO_ACADEMICO":1,"ESTUDIO":1,"LOCALIDAD":1,"CENTRO":1,"NOTA_CORTE_DEFINITIVA_JULIO":1,"NOTA_CORTE_DEFINITIVA_SEPTIEMBRE":1,"FECHA_ACTUALIZACION":1, "aux.TIPO_CENTRO":1,"aux.TIPO_ESTUDIO":1,"aux.PLAZAS_OFERTADAS":1,"aux.PLAZAS_MATRICULADAS":1,"aux.PLAZAS_SOLICITADAS":1,"aux.INDICE_OCUPACION":1,}}])
 
 
 
